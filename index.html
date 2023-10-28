@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Library</title>
+    
+</head>
+<body>
+    <div class="sidenav">
+        <div class="sidebar-content">
+            <p class="sidebar-header">BOOK LIST</p>
+            <ul class="alphabet-list" id = "alphabet-list">
+                <!-- Add more letters here if needed -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Modal for choosing relevant book -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Select Your Book</h5>
+            </div>
+            <div id='book-modal' class="grid-container book-modal modal-body">
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div id="jumbotron" class="jumbotron text-center">
+            <h1 id="library-title">Library</h1>
+        </div>
+        <div class="book-list grid-container-main" id="book-list">
+        </div>
+        <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark nav-grey">
+            <h2 class="pr-5">Add:</h2>
+            <form class="add-book-form" id="add-book-form">
+                <label for="book-title">Book Title:</label>
+                <input type="text" id="book-title" name="book-title" required>
+
+                <label for="book-author">Book Author:</label>
+                <input type="text" id="book-author" name="book-author">
+
+                <label for="book-pages">Number of Pages:</label>
+                <input type="number" id="book-pages" name="book-pages"> 
+
+                <label for="book-read">Read:</label>
+                <input type="checkbox" id="book-read" name="book-read">
+
+                <label for="book-favourite">Favourite: </label>
+                <input type="checkbox" id="book-favourite" name="book-favourite">
+
+                <button type="submit">Add Book</button>
+            </form>
+        </nav>
+    </div>
+
+    <!-- Add this template within your HTML body -->
+    <template id="book-card-template">
+        <div class="book-card padded-card shadow-md">
+            <h2 class="book-title"></h2>
+            <p class="book-author"></p>
+            <p class="book-pages"></p>
+            <label>
+                <input type="checkbox" class="read-checkbox">
+                Read
+            </label>
+            <img class="book-cover"></img>
+            <button class="delete-button">Delete</button>
+        </div>
+    </template>
+
+    <template id="book-select-template">
+        <div id="book-modal-card-template" class="book-modal-card-template card mb-4 box-shadow">
+            <img id="book-img-temp" class="book-img-temp"></img>
+            <div id="book-modal-card-body" class="book-modal-card-body card-body">
+                <p id='book-title-temp' class="book-title-temp card-text"></p>
+                <p id='book-author-temp' class="book-author-temp card-text"></p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <small id='book-pages-temp' class="book-pages-temp text-muted">9 mins</small>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="javascript/apikey.js"></script>
+    <script src="javascript/openbookapi.js"></script>
+    <script src="javascript/library.js"></script>
+</body>
+
+</html>

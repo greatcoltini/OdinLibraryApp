@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    margin-left: 160px;
+}
+
+/* The sidebar menu */
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 160px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+  }
+  
+  /* The navigation menu links */
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+  }
+
+.sidebar-header {
+    color: white;
+    text-align: center;
+}
+
+.alphabet-list {
+    list-style: inline-block;
+    padding: 0;
+}
+
+.alphabet-list li {
+    margin: 5px 0;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.book-card {
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.book-card h2 {
+    margin: 0;
+}
+
+.read-checkbox {
+    margin: 10px 0;
+}
+
+.delete-button {
+    background: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    float: right;
+}
+
+.delete-button:hover {
+    background: #893131;
+}
+
+.add-book {
+    margin-top: 20px;
+}
+
+.book-img-temp {
+    max-width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.book-modal-card-template:hover {
+    opacity: 75%;
+    background-color:beige;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.grid-container-main {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+
+.padded-card {
+    margin: 3px;
+}
+
+.jumbotron {
+    padding: 5px;
+}
+
+.nav-grey {
+    background-color: #e9ecef;
+    border: black;
+    border-radius: 2px;
+    border-style: solid;
+}
+
+.li-small {
+    font-size: 10px;
+    text-align: center;
+    color: white;
+}
+
+.crossed {
+    text-decoration: line-through;
+}
